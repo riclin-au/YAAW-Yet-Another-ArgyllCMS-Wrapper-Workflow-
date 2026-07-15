@@ -9,6 +9,7 @@ relevant ArgyllCMS printer profiling commands and settings, with man pages for e
 being accessible from the configuration page for reference. Developed and tested under both Linux
 Mint and macOS, other platforms should work in principle but may need path/default-command
 adjustments.
+
 The initial Configuration screen provides editable presets for the most common options for each of
 the Argyll tools, with each tool having an additional field for adding further arguments if required.
 Profile directory names are auto-generated based on the contents of the Printer/Paper/Ink fields,
@@ -18,6 +19,7 @@ to coexist, while also recording how each profile was generated, identifiably st
 sensibly named parent directory. To simplify startup, a config from a similar session can be loaded
 at the Configuration screen and the Paper Name simply edited to suit the new job before
 proceeding.
+
 Patchcount and papersize settings are included for several instruments, although the default is for
 the ColorMunki. Targets are sized for A3 paper which is then printed condensed onto A4, with the
 target generated at the larger nominal page size, then printed scaled down by the printer/print
@@ -30,6 +32,7 @@ ColorMunki or similar spectrophometer is essential with these condensed targets,
 higher densities, strip reading has proven to be 100% reliable. Alternatively, the standard Argyll
 patch counts for each page size may be selected and the targets printed at the standard defaults of
 210 or 420 patches per A4 or A3 page.
+
 An option is available to inspect the Argyll commands prior to execution. Extensive logs are also
 maintained. Each profiling session is automatically recorded as a suitably named JSON file
 containing the complete configuration used to generate that profile. These also allow for an initial
@@ -39,9 +42,11 @@ Once an ICC profile has been created, a simple static gamut viewer is available 
 the profile limits and other pertinent metrics. YAAW tests for and warns against inadvertent
 overwriting of previously generated data, and includes crash recovery, restarting from the last active
 step in the event of a system failure.
+
 Default directory locations are probably sensible in most instances but may be edited at the top of
 the script if necessary. Although developed using an x-rite ColorMunki, YAAW is equally
 applicable for use with other spectrophotometers - although some of the "Patch" presets may need
 adjustment (other patch values can be entered manually and will be saved in the JSON config file)
+
 YAAW does not attempt to hide ArgyllCMS. Instead, it provides a structured workflow around the
 standard Argyll tools while keeping all generated commands visible and editable.
