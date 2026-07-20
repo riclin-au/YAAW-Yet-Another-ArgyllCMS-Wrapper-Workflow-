@@ -726,8 +726,8 @@ class PrinterProfilingGUI:
 
         action_frame = ttk.Frame(header)
         action_frame.pack(side='right')
-        ttk.Button(action_frame, text="Save Config", command=self.save_config, style="YAAWHeader.TButton").pack(side='left', padx=(0, 5))
         ttk.Button(action_frame, text="Load Config", command=self.load_config, style="YAAWHeader.TButton").pack(side='left', padx=(0, 5))
+        ttk.Button(action_frame, text="Save Config", command=self.save_config, style="YAAWHeader.TButton").pack(side='left', padx=(0, 5))
         ttk.Button(action_frame, text="Exit", command=self.root.destroy, style="YAAWHeader.TButton").pack(side='left')
 
         try:
