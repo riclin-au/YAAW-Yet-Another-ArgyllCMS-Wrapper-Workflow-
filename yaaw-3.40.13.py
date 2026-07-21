@@ -2074,7 +2074,7 @@ class PrinterProfilingGUI:
         
         self.status_var = tk.StringVar(value="Ready")
         status_label = ttk.Label(status_frame, textvariable=self.status_var, 
-                                font=('TkDefaultFont', 14, 'bold'))
+                                font=('TkDefaultFont', 12, 'bold'))
         status_label.pack()
         
         # Workflow buttons
@@ -2105,8 +2105,8 @@ class PrinterProfilingGUI:
         control_frame = ttk.Frame(parent)
         control_frame.pack(fill='x', padx=5, pady=5)
         
-        ttk.Button(control_frame, text="Clear Log", command=self.clear_log, style="YAAWAction.TButton").pack(side='left', padx=5)
-        ttk.Button(control_frame, text="Show Current Settings", command=self.show_current_settings, style="YAAWAction.TButton").pack(side='left', padx=5)
+        ttk.Button(control_frame, text="Clear Screen", command=self.clear_log, style="YAAWAction.TButton").pack(side='left', padx=5)
+        ttk.Button(control_frame, text="Current Settings", command=self.show_current_settings, style="YAAWAction.TButton").pack(side='left', padx=5)
         self.view_log_button = ttk.Button(control_frame, text="View Log", command=self.toggle_project_log_view, style="YAAWAction.TButton")
         self.view_log_button.pack(side='left', padx=5)
         ttk.Button(control_frame, text="View Gamut", command=self.show_gamut_viewer, style="YAAWAction.TButton").pack(side='left', padx=5)
