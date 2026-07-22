@@ -57,9 +57,10 @@ License: MIT
 3.40.15: Restored the chartread terminal Text widget to platform-native styling and reinforced focus/Return routing, fixing a macOS Aqua/Tk regression where the calibration prompt opened but keyboard input did not reach chartread.
 3.40.16: Step 3 now asks ArgyllCMS to enumerate connected instruments before opening chartread, aborting cleanly when no device is found or when the connected device does not match the selected CM/i1/3p instrument family.
 3.40.17: Step 3 instrument preflight now runs before any file-overwrite warning, so missing or mismatched hardware is reported before the user is asked about existing output files.
+3.40.18: The detailed profcheck run now includes labelled Lab axes and exposes its generated interactive X3DOM through a browser-launch button that appears only while viewing the persistent project log.
 3.40.19: Swapped the logfile-view Live Output and X3DOM button positions so View Log and Live Output occupy the same screen position.
 3.40.20: The persistent profcheck summary now retains the harmless patch-count line without counting it against the ten highest delta-E result entries.
-3.40.18: The detailed profcheck run now includes labelled Lab axes and exposes its generated interactive X3DOM through a browser-launch button that appears only while viewing the persistent project log.
+
 """
 
 import tkinter as tk
