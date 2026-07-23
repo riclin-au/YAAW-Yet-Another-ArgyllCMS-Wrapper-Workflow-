@@ -2132,7 +2132,7 @@ class PrinterProfilingGUI:
         # only when profcheck has actually generated its X3DOM HTML model.
         self.profcheck_3d_button = ttk.Button(
             control_frame,
-            text="X3DOM",
+            text="3D Error Map",
             command=self.open_profcheck_3d_model,
             style="YAAWAction.TButton"
         )
@@ -2702,7 +2702,7 @@ License: MIT
         if not path or not path.exists():
             self.show_warning(
                 "3D Gamut",
-                "No iccgamut X3DOM model exists for the current profile.\n\n"
+                "No iccgamut 3D Error Map model exists for the current profile.\n\n"
                 "Open View Gamut again to generate it."
             )
             return
@@ -2727,8 +2727,8 @@ License: MIT
         path = self.get_profcheck_3d_model_path()
         if not path or not path.exists():
             self.show_warning(
-                "X3DOM",
-                "No profcheck X3DOM exists for the current project.\n\n"
+                "3D Error Map",
+                "No profcheck 3D Error Map exists for the current project.\n\n"
                 "Build the profile with Step 4 first."
             )
             return
@@ -2736,13 +2736,13 @@ License: MIT
             opened = webbrowser.open_new(path.resolve().as_uri())
         except Exception as exc:
             self.show_error(
-                "X3DOM",
-                f"Could not open the X3DOM:\n{path}\n\n{exc}"
+                "3D Error Map",
+                f"Could not open the 3D Error Map:\n{path}\n\n{exc}"
             )
             return
         if not opened:
             self.show_error(
-                "X3DOM",
+                "3D Error Map",
                 f"The system browser could not open:\n{path}"
             )
             return
@@ -4288,7 +4288,7 @@ License: MIT
             cwd=working_dir,
             max_lines=10,
             quota_exempt_prefixes=("No of test patches",),
-            heading="profcheck highest delta-E results (10 entries; X3DOM generated with Lab axes):"
+            heading="profcheck highest delta-E results (10 entries; 3D Error Map generated with Lab axes):"
         )
 
         # Copy profile to output directory
@@ -4850,7 +4850,7 @@ License: MIT
         if not gamut_3d_path.exists():
             self.log(
                 f"WARNING: iccgamut created {gam_path.name} but did not create "
-                f"the expected X3DOM model {gamut_3d_path.name}."
+                f"the expected 3D Error Map model {gamut_3d_path.name}."
             )
 
         # --- Parse the .gam file (CGATS format) ---
