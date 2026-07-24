@@ -234,7 +234,7 @@ class _ArgyllHtmlParser(HTMLParser):
 WORKING_ROOT = Path(os.path.expanduser("~/ColourManagement/YAAW"))
 ICC_OUTPUT_ROOT = Path(os.path.expanduser("~/.local/share/color/icc"))
 PROFILE_BROWSE_ROOT = Path(os.path.expanduser("~/ColourManagement"))
-SESSION_FILE = Path(os.path.expanduser("~/tmp/.prtrprof_session.json"))
+SESSION_FILE = Path(os.path.expanduser("~/tmp/.yaaw_session.json"))
 
 
 def strip_argyll_suffix(name):
