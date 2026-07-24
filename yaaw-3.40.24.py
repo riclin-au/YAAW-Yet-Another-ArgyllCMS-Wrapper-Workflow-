@@ -471,9 +471,10 @@ class PrinterProfilingGUI:
                     f"Recovery file:\n{self.config_file}\n\n"
                     f"Last completed workflow step: {last_step}\n"
                     f"Last saved: {timestamp}\n\n"
-                    "This is the transient crash-recovery session that is saved while you type; "
-                    "it is not necessarily a project JSON saved beside the Argyll files.\n\n"
-                    "Would you like to restore this recovery session?"
+                    "This is the transient crash-recovery session that \n"
+                    "is saved as you type; it is not necessarily a project \n "
+                    "JSON saved beside the Argyll files.\n\n"
+                    "Would you like to restore this recovery session? \n\n"
                 )
                 if resume:
                     self.apply_loaded_session()
@@ -3228,7 +3229,9 @@ License: MIT
     def abort_session(self):
         """Clear all saved session data and return to Configuration tab"""
         if not self.ask_yes_no("Abort Session",
-                "This will clear the transient auto-recovery session and return to the Configuration screen.\n\nIt will not delete project JSON files saved beside Argyll outputs.\n\nContinue?"):
+                "This will clear the transient auto-recovery session \n"
+                "and return to the Configuration screen. It will not\n"
+                "delete project JSON files saved beside Argyll outputs.\n\nContinue?\n\n"):
             return
 
         # Delete the session file
@@ -3726,7 +3729,8 @@ License: MIT
             f"Step {step_num} may overwrite or invalidate existing generated file(s):\n\n"
             + "\n".join(names)
             + "\n\nContinue?\n\n"
-            "Choose No if these files correspond to a target you have already printed or measured."
+            "Choose No if these files correspond to a target you \n"
+            "have already printed or measured.\n\n"
         )
         return self.ask_yes_no("Existing files found", msg)
 
@@ -4001,7 +4005,8 @@ License: MIT
                 raise Exception(
                     "Preconditioning profile does not exist:\n\n"
                     f"{precond}\n\n"
-                    "Use an existing ICC/MPP profile path, enter 'none', or leave the field blank."
+                    "Use an existing ICC/MPP profile path, enter 'none', \n"
+                    "or leave the field blank."
                 )
             cmd.extend(['-c', precond_arg])
 
