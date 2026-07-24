@@ -5421,7 +5421,7 @@ License: MIT
 
         gamut_3d_button = ttk.Button(
             metrics_body,
-            text="3D Gamut",
+            text="3D Gamut View",
             command=self.open_gamut_3d_model,
             style="YAAWAction.TButton"
         )
